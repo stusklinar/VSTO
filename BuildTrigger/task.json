@@ -1,0 +1,39 @@
+{
+    "id": "{{taskguid}}",
+    "name": "TriggerBuild",
+    "friendlyName": "VSTS Build Trigger",
+    "description": "Method to queue new builds by ID",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Stuart Alexander Ltd",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Trigger Dependent Build",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "buildId",
+            "type": "string",
+            "label": "Build DefinitionID",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A ID of the build required to be queued"
+        }
+    ],
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\TriggerBuildsByWildCard.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}

@@ -1,12 +1,10 @@
 param (
-    [switch]$tfsAPIURL,
-    [switch]$token,
     [switch]$buildId
 )
 
-$tfsAPI = $(tfsAPIURL)+"/_apis/build"
+$tfsAPI = "$(ENV:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)/$(ENV:SYSTEM_TEAMPROJECT)/_apis/build"
 
-$base64authinfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "", $token)))
+$base64authinfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "", $(ENV:SYSTEM_ACCESSTOKEN))))
 $header = @{Authorization=("Basic {0}" -f $base64authinfo)}
 
 

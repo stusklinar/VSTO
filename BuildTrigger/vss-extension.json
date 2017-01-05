@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "queue-build",
+    "name": "Queue Build",
+    "version": "0.0.1",
+    "publisher": "Stuart Alexander Ltd",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Process for queuing a build",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": ""
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "BuildTrigger"
+            }
+        }
+    ]
+}

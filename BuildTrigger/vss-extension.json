@@ -3,7 +3,7 @@
     "id": "queue-build",
     "name": "Queue Build",
     "version": "0.0.1",
-    "publisher": "Stuart Alexander Ltd",
+    "publisher": "StuartAlexanderLtd",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -13,12 +13,9 @@
     "categories": [
         "Build and release"
     ],
-    "icons": {
-        "default": "images/extension-icon.png"
-    },
     "files": [
         {
-            "path": ""
+            "path": "task.json"
         }
     ],
     "contributions": [

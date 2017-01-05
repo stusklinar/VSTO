@@ -1,5 +1,5 @@
 {
-    "id": "{{taskguid}}",
+    "id": "408798f6-dc19-40af-96df-9e06c611da76",
     "name": "TriggerBuild",
     "friendlyName": "VSTS Build Trigger",
     "description": "Method to queue new builds by ID",

@@ -7,9 +7,9 @@
     "category": "Utility",
     "author": "Stuart Alexander Ltd",
     "version": {
-        "Major": 0,
+        "Major": 1,
         "Minor": 1,
-        "Patch": 0
+        "Patch": 1
     },
     "instanceNameFormat": "Trigger Dependent Build",
     "groups": [
@@ -31,9 +31,9 @@
     ],
     "execution": {
         "PowerShell": {
-            "target": "$(currentDirectory)\\TriggerBuildsByWildCard.ps1",
+            "target": "TriggerBuildByWildCard.ps1",
             "argumentFormat": "",
-            "workingDirectory": "$(currentDirectory)"
+            "workingDirectory": "$(currentDirectory)\\BuildTrigger"
         }
     }
 }

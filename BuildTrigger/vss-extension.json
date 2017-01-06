@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "queue-build",
     "name": "Queue Build",
-    "version": "0.0.1",
+    "version": "1.1.1",
     "publisher": "StuartAlexanderLtd",
     "targets": [
         {
@@ -15,7 +15,10 @@
     ],
     "files": [
         {
-            "path": "task.json"
+            "path": "BuildTrigger\\task.json"
+        },
+        {
+            "path": "BuildTrigger\\TriggerBuildByWildCard.ps1"
         }
     ],
     "contributions": [
